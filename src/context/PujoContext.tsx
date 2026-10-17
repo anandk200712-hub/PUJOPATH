@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useState, useEffect, useCallback } from 'react';
 import { Pandal, CrowdReport, JourneySummary, UserBadge, VisitedPandal } from '../types';
+import initialPandals from '../data/pandals.json';
 
 interface PujoContextType {
   pandals: Pandal[];
@@ -36,7 +37,7 @@ const API_BASE = '/api';
 const CURRENT_USER_ID = 'user_demo_kolkata';
 
 export const PujoProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [pandals, setPandals] = useState<Pandal[]>([]);
+  const [pandals, setPandals] = useState<Pandal[]>(initialPandals as Pandal[]);
   const [isLoading, setIsLoading] = useState(true);
   const [selectedPandal, setSelectedPandal] = useState<Pandal | null>(null);
   const [reportModalPandal, setReportModalPandal] = useState<Pandal | null>(null);
