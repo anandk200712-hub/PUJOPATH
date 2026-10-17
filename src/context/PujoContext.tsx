@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect, useCallback } from 'react';
-import { Pandal, CrowdReport, JourneySummary, UserBadge } from '@kisansetu/shared';
+import { Pandal, CrowdReport, JourneySummary, UserBadge, VisitedPandal } from '../types';
 
 interface PujoContextType {
   pandals: Pandal[];
@@ -176,7 +176,7 @@ export const PujoProvider: React.FC<{ children: React.ReactNode }> = ({ children
   };
 
   // Visited IDs list for fast badge and map checks
-  const visitedPandalIds = journeySummary?.visitedPandals?.map((vp) => vp.pandal_id) || [];
+  const visitedPandalIds = journeySummary?.visitedPandals?.map((vp: VisitedPandal) => vp.pandal_id) || [];
 
   return (
     <PujoContext.Provider

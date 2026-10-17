@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { usePujo } from '../../context/PujoContext';
-import { Pandal, EventSchedule } from '@kisansetu/shared';
+import { Pandal, EventSchedule } from '../../types';
 import { 
   X, 
   MapPin, 

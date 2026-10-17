@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { usePujo } from '../../context/PujoContext';
-import { Pandal } from '@kisansetu/shared';
+import { Pandal } from '../../types';
 import { 
   X, 
   Users, 

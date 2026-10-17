@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { MapContainer, TileLayer, Marker, Popup, Polyline, useMap } from 'react-leaflet';
 import L from 'leaflet';
 import { usePujo } from '../../context/PujoContext';
-import { Pandal } from '@kisansetu/shared';
+import { Pandal } from '../../types';
 import { LocationPermissionModal } from './LocationPermissionModal';
 import { 
   Navigation, 

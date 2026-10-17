@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { usePujo } from '../../context/PujoContext';
+import { UserBadge } from '../../types';
 import { 
   Play, 
   Pause, 
@@ -139,7 +140,7 @@ Join the parikrama: ${window.location.origin}`;
     { key: 'ten_km_trailblazer', name: '10 KM Trailblazer', desc: 'Covered 10 kilometers during Durga Puja Parikrama.', icon: '⚡' },
   ];
 
-  const earnedKeys = (journeySummary?.badges?.map((b) => b.badge_key as string) || []) as string[];
+  const earnedKeys = (journeySummary?.badges?.map((b: UserBadge) => b.badge_key as string) || []) as string[];
 
   return (
     <div className="space-y-8">
